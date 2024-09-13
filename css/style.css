@@ -296,14 +296,104 @@ li {
 .nav-scion > li > a > i:active {
   color: var(--color-orange-300);
 }
+/* card image car */
+.card-model {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+.box-container {
+  border: 1px solid var(--color-white-300);
+  border-radius: 25px;
+  transition: all 0.3s ease-in;
+}
+.box-container:hover {
+  border: 1px solid var(--color-orange-200);
+}
+.img-model {
+  background: linear-gradient(to top, black, white);
+  padding: 50px;
+  border-radius: 25px 25px 0 0;
+}
+.img-model > img {
+  width: 100%;
+  height: 100%;
+}
+.box-card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-black-200);
+  padding: 10px;
+  border-radius: 0 0 25px 25px;
+}
+.box-card-price > h3 {
+  color: var(--color-white-200);
+  padding: 10px;
+  border-bottom: 1px solid var(--color-black-300);
+}
+.box-card-price > h3:hover {
+  border-bottom: 1px solid var(--color-orange-200);
+}
+.img-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.img-icon > p {
+  text-align: center;
+}
+.price-car {
+  border-top: 1px solid var(--color-black-300);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.price-car:hover {
+  border-top: 1px solid var(--color-orange-200);
+}
+.img-icon > p {
+  font-size: var(--font-size-100);
+}
+.svg-img {
+  fill: #ffffff;
+  transition: all 0.3s ease-in;
+}
+.svg-img:hover {
+  fill: var(--color-orange-200);
+}
+.svg-img-2 {
+  stroke: var(--color-white-100);
+  transition: all 0.3s ease-in;
+}
+
+.svg-img-2:hover {
+  stroke: var(--color-orange-200);
+}
+.price-car > p > svg {
+  fill: #ffffff;
+  transition: all 0.3s ease-in;
+}
+.price-car > p > svg:hover {
+  fill: var(--color-orange-200);
+}
+.price-car > p > span {
+  padding: 10px;
+  text-align: center;
+}
+.price-car > p:first-child {
+  color: red;
+}
+
 @media screen and (min-width: 600px) {
   .nav-list {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
   }
-  .nav-link{
+  .nav-link {
     border: none;
   }
   .toggle {
@@ -326,6 +416,14 @@ li {
     font-size: var(--font-size-200);
     color: hsl(0, 0%, 100%);
   }
+  .price-car {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4px;
+  }
+  .card-model {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 768px) {
   .container-navbar {
@@ -333,4 +431,19 @@ li {
     grid-template-columns: 1fr 380px 200px;
     gap: 10px;
   }
+  .card-model {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .price-car {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+@media screen and (min-width: 900px) {
+ 
+  .card-model {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ 
 }
