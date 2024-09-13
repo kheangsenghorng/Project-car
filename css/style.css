@@ -195,10 +195,10 @@ li {
   font-size: var(--font-size-100);
 }
 .number-nav > .link:hover {
-    color:var(--color-orange-300) ;
+  color: var(--color-orange-300);
 }
 .number-nav > .link:active {
-    color:var(--color-orange-200) ;
+  color: var(--color-orange-200);
 }
 .layout-number {
   display: flex;
@@ -212,8 +212,125 @@ li {
   border: none;
 }
 .layout-number > .btn:hover {
-   color: var(--color-black-200);
+  color: var(--color-black-200);
 }
 .layout-number > .btn:active {
-   color: var(--color-orange-200);
+  color: var(--color-orange-200);
+}
+/*  logo heading*/
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-img {
+  width: 40px;
+}
+.nav-img > img {
+  width: 100%;
+}
+
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  /* padding: 20px; */
+}
+
+.toggle {
+  color: var(--color-white-300);
+  background-color: var(--bg-transparent);
+  border-radius: var(--border-radius-300);
+  font-size: var(--font-size-300);
+  backdrop-filter: blur(10px);
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  color: transparent;
+}
+.nav-list.active {
+  display: flex;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  font-size: var(--font-size-200);
+  border-bottom: 1px solid var(--color-black-300);
+  padding: 10px 0;
+}
+
+.nav-link > a {
+  color: var(--color-black-300);
+  letter-spacing: 2px;
+}
+.nav-link > a:hover {
+  color: var(--color-orange-200);
+}
+.nav-scion {
+  display: flex;
+  font-size: var(--font-size-300);
+  gap: 20px;
+  padding: 20px;
+}
+.nav-scion.active {
+  display: flex;
+  backdrop-filter: blur(10px);
+}
+.nav-scion > li > a > i {
+  color: var(--color-black-200);
+}
+.nav-scion > li > a > i:hover {
+  color: var(--color-orange-100);
+}
+.nav-scion > li > a > i:active {
+  color: var(--color-orange-300);
+}
+@media screen and (min-width: 600px) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+  }
+  .nav-link{
+    border: none;
+  }
+  .toggle {
+    display: none;
+  }
+  .container-navbar {
+    /* background-color: red; */
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 150px;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-100);
+  }
+  .nav-scion {
+    font-size: var(--font-size-200);
+    color: hsl(0, 0%, 100%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-navbar {
+    display: grid;
+    grid-template-columns: 1fr 380px 200px;
+    gap: 10px;
+  }
 }
