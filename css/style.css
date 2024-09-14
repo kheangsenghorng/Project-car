@@ -39,7 +39,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
+  /* background-color: black; */
   color: var(--color-white-100);
 }
 
@@ -173,7 +173,7 @@ li {
 
 /* Nav meun number */
 .container-nav-number {
-  background-color: var(--color-black-300);
+  /* background-color: var(--color-black-300); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,23 +183,40 @@ li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
   padding: 3px;
+
 }
 .number-nav > .link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  padding: 12px;
   font-size: var(--font-size-100);
 }
-.number-nav > .link:hover {
+.link{
+  color: var(--color-black-200 );
+  width: 30px;
+  height: 30px;
+  transition: all 250ms ease-in-out;
+  padding: 20px;
+  
+}
+.link:hover{
+     border: 1px solid blue;
+  border-radius: 25px;
+}
+
+.link > a {
+  font-size: var(--font-size-100);
+}
+
+.number-nav > .link > a:hover {
   color: var(--color-orange-300);
 }
 .number-nav > .link:active {
   color: var(--color-orange-200);
 }
+
 .layout-number {
   display: flex;
   align-items: center;
@@ -221,7 +238,6 @@ li {
 
 .logo-container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 .nav-img {
@@ -238,7 +254,8 @@ li {
   width: 100%;
   top: 0;
   position: fixed;
-  /* padding: 20px; */
+  /* padding: 5px; */
+  /* border-bottom: 1px solid var(--bg-transparent); */
 }
 
 .toggle {
@@ -262,6 +279,10 @@ li {
 .nav-list.active {
   display: flex;
   backdrop-filter: blur(10px);
+}
+.heading-car > h3{
+  color: var(--color-black-200);
+ 
 }
 
 .nav-link {
@@ -308,29 +329,49 @@ li {
   border: 1px solid var(--color-white-300);
   border-radius: 25px;
   transition: all 0.3s ease-in;
+  
 }
 .box-container:hover {
   border: 1px solid var(--color-orange-200);
 }
 .img-model {
-  background: linear-gradient(to top, black, white);
-  padding: 50px;
-  border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    position: relative;
 }
+
 .img-model > img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: auto; /* Ensures the image keeps its aspect ratio */
+    object-fit: cover;
+   /* Adds padding inside the image, but this could interfere with the look */
 }
+.img-model > p{
+  display: none;
+   position: absolute;
+   z-index: 1;
+   color: #1d1c1a;
+   top: 10px;
+   left: 20px;
+   font-size: var(--font-size-100);
+   background-color: #22c55E;
+   color: var(--color-white-100);
+   border-radius: 14px;
+   padding: 5px;
+}
+.img-model > .box{
+    display: flex;
+}
+
 .box-card-price {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--color-black-200);
   padding: 10px;
   border-radius: 0 0 25px 25px;
 }
 .box-card-price > h3 {
-  color: var(--color-white-200);
+ color: var(--color-black-100);
   padding: 10px;
   border-bottom: 1px solid var(--color-black-300);
 }
@@ -343,6 +384,7 @@ li {
 }
 .img-icon > p {
   text-align: center;
+  color: var(--color-black-100);
 }
 .price-car {
   border-top: 1px solid var(--color-black-300);
@@ -351,21 +393,25 @@ li {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+.price-car > p {
+  color: blue;
+}
 .price-car:hover {
   border-top: 1px solid var(--color-orange-200);
 }
 .img-icon > p {
   font-size: var(--font-size-100);
+ 
 }
 .svg-img {
-  fill: #ffffff;
+  fill: var(--color-black-100);
   transition: all 0.3s ease-in;
 }
 .svg-img:hover {
   fill: var(--color-orange-200);
 }
 .svg-img-2 {
-  stroke: var(--color-white-100);
+  stroke: var(--color-black-100);
   transition: all 0.3s ease-in;
 }
 
@@ -373,7 +419,7 @@ li {
   stroke: var(--color-orange-200);
 }
 .price-car > p > svg {
-  fill: #ffffff;
+  fill: black;
   transition: all 0.3s ease-in;
 }
 .price-car > p > svg:hover {
@@ -392,6 +438,7 @@ li {
     display: flex;
     flex-direction: row;
     gap: 10px;
+
   }
   .nav-link {
     border: none;
@@ -400,20 +447,19 @@ li {
     display: none;
   }
   .container-navbar {
-    /* background-color: red; */
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; */
     display: grid;
-    grid-template-columns: 1fr 1fr 150px;
+    grid-template-columns: repeat(3,1fr);
     gap: 10px;
+  }
+  .logo-container{
+     margin-left: 10px;
   }
 
   .nav-link {
     font-size: var(--font-size-100);
   }
   .nav-scion {
-    font-size: var(--font-size-200);
+    font-size: var(--font-size-100);
     color: hsl(0, 0%, 100%);
   }
   .price-car {
@@ -441,9 +487,18 @@ li {
   }
 }
 @media screen and (min-width: 900px) {
- 
+  .nav-list{
+    display: flex;
+    justify-content: flex-end;
+  }
+ .nav-scion {
+   display: flex;
+    justify-content: flex-end;
+     font-size: var(--font-size-200);
+ }
   .card-model {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
+     padding: 0 100px 0 100px;
   }
  
 }
