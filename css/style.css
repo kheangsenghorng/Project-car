@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,800;1,200;1,400;1,500;1,600;1,700&display=swap");
+
 :root {
   font-size: 65.25%;
   --font-size-100: 1.3rem;
@@ -185,7 +186,6 @@ li {
   align-items: center;
   gap: 10px;
   padding: 3px;
-
 }
 .number-nav > .link {
   display: flex;
@@ -193,16 +193,15 @@ li {
   align-items: center;
   font-size: var(--font-size-100);
 }
-.link{
-  color: var(--color-black-200 );
+.link {
+  color: var(--color-black-200);
   width: 30px;
   height: 30px;
   transition: all 250ms ease-in-out;
   padding: 20px;
-  
 }
-.link:hover{
-     border: 1px solid blue;
+.link:hover {
+  border: 1px solid blue;
   border-radius: 25px;
 }
 
@@ -280,9 +279,8 @@ li {
   display: flex;
   backdrop-filter: blur(10px);
 }
-.heading-car > h3{
+.heading-car > h3 {
   color: var(--color-black-200);
- 
 }
 
 .nav-link {
@@ -329,38 +327,37 @@ li {
   border: 1px solid var(--color-white-300);
   border-radius: 25px;
   transition: all 0.3s ease-in;
-  
 }
 .box-container:hover {
   border: 1px solid var(--color-orange-200);
 }
 .img-model {
-    border-radius: 25px 25px 0 0;
-    overflow: hidden;
-    position: relative;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .img-model > img {
-    width: 100%;
-    height: auto; /* Ensures the image keeps its aspect ratio */
-    object-fit: cover;
-   /* Adds padding inside the image, but this could interfere with the look */
+  width: 100%;
+  height: auto; /* Ensures the image keeps its aspect ratio */
+  object-fit: cover;
+  /* Adds padding inside the image, but this could interfere with the look */
 }
-.img-model > p{
+.img-model > p {
   display: none;
-   position: absolute;
-   z-index: 1;
-   color: #1d1c1a;
-   top: 10px;
-   left: 20px;
-   font-size: var(--font-size-100);
-   background-color: #22c55E;
-   color: var(--color-white-100);
-   border-radius: 14px;
-   padding: 5px;
+  position: absolute;
+  z-index: 1;
+  color: #1d1c1a;
+  top: 10px;
+  left: 20px;
+  font-size: var(--font-size-100);
+  background-color: #22c55e;
+  color: var(--color-white-100);
+  border-radius: 14px;
+  padding: 5px;
 }
-.img-model > .box{
-    display: flex;
+.img-model .box {
+  display: flex;
 }
 
 .box-card-price {
@@ -371,7 +368,7 @@ li {
   border-radius: 0 0 25px 25px;
 }
 .box-card-price > h3 {
- color: var(--color-black-100);
+  color: var(--color-black-100);
   padding: 10px;
   border-bottom: 1px solid var(--color-black-300);
 }
@@ -401,7 +398,6 @@ li {
 }
 .img-icon > p {
   font-size: var(--font-size-100);
- 
 }
 .svg-img {
   fill: var(--color-black-100);
@@ -432,13 +428,46 @@ li {
 .price-car > p:first-child {
   color: red;
 }
+/* type logo car */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.container-model {
+  border: 1px solid var(--color-white-300);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  gap: 7px;
+}
+.container-model > p {
+  color: var(--color-black-300);
+}
+.container-model:hover {
+  box-shadow: 3px 3px 2px var(--color-white-200);
+}
+.type-logo {
+  object-fit: cover;
+  width: 40px;
+}
+.type-logo:hover {
+  transform: scale(1.1);
+}
+.type-logo > img {
+  width: 100%;
+}
 
 @media screen and (min-width: 600px) {
   .nav-list {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
   }
   .nav-link {
     border: none;
@@ -448,11 +477,11 @@ li {
   }
   .container-navbar {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  .logo-container{
-     margin-left: 10px;
+  .logo-container {
+    margin-left: 10px;
   }
 
   .nav-link {
@@ -483,22 +512,20 @@ li {
   .price-car {
     display: flex;
     justify-content: space-between;
-
   }
 }
 @media screen and (min-width: 900px) {
-  .nav-list{
+  .nav-list {
     display: flex;
     justify-content: flex-end;
   }
- .nav-scion {
-   display: flex;
+  .nav-scion {
+    display: flex;
     justify-content: flex-end;
-     font-size: var(--font-size-200);
- }
-  .card-model {
-    grid-template-columns: repeat(3,1fr);
-     padding: 0 100px 0 100px;
+    font-size: var(--font-size-200);
   }
- 
+  .card-model {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 100px 0 100px;
+  }
 }
